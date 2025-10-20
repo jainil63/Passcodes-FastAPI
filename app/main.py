@@ -6,7 +6,8 @@ app = FastAPI()
 @app.get("/")
 def root():
     return {
-        "message": "Hello World!!",
-        "url": "https://github.com/PasscodesApp"
+        "message": "Hello Passcodes!!",
+        "url": "https://github.com/PasscodesApp", 
+        "maintainer": "https://github.com/jainil63"
     }
 
