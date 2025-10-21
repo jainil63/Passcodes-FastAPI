@@ -11,3 +11,8 @@ def root():
         "maintainer": "https://github.com/jainil63"
     }
 
+@app.get("/password")
+def get_password():
+    return {
+        "password": "YourSecurePassword123!"
+    }
