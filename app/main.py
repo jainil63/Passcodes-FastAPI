@@ -35,3 +35,9 @@ def get_password(passworditem: Password):
 @app.get("/passwords")
 def list_passwords():
     return userData
+
+@app.delete("/passwords/{password_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_password(password_id: int):
+    global userData
+    userData = [pwd for pwd in userData if pwd['id'] != password_id]
+    return JSONResponse(status_code=status.HTTP_204_NO_CONTENT)
